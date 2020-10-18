@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+// import PropTypes from 'prop-types';
+
 
 function App() {
   return (
@@ -22,5 +24,9 @@ function App() {
     </div>
   );
 }
+
+// Greeting.propTypes = {
+//   name: PropTypes.string
+// };
 
 export default App;
