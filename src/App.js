@@ -1,17 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 // import PropTypes from 'prop-types';
-
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <p>
-        Hello world
+          Hello world
         </p>
-       
       </header>
     </div>
   );
