@@ -1,17 +1,12 @@
 import React from 'react';
 import Book from './book';
+// import PropTypes from 'prop-types'
 
 class BookList extends React.Component {
-  // constructor(props) {
-  //   super(props)
-  //   this.state = {
-  //   id: ,
-  //   title: ,
-  //   category: ,
-  //   }
-  // }
 
   render() {
+    const book = { id: '20', title: 'River between', category: 'fiction' };
+
     return (
       <div>
         <table>
@@ -20,7 +15,7 @@ class BookList extends React.Component {
             <th>Title</th>
             <th>Category</th>
           </tr>
-         <Book />
+          <Book {...book} />
         </table>
       </div>
     )
