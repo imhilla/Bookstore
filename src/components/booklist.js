@@ -3,7 +3,6 @@ import Book from './book';
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux';
 
-
 const BookList = ({ books }) => {
   return (
     <div>

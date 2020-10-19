@@ -5,7 +5,6 @@ const initialState = {
 }
 
 function books(state = initialState, action) {
-  console.log('woow')
   switch (action.type) {
     case ADD_BOOK:
       return Object.assign({}, state, {
