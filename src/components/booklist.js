@@ -10,7 +10,7 @@ const BookList = ({ books }) => (
         <th>Title</th>
         <th>Category</th>
       </tr>
-      {books.map((book, index) => (
+      {books.map(book => (
         <Book key={book.id} {...book} />
       ))}
     </table>

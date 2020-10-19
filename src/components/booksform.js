@@ -1,10 +1,13 @@
+/* eslint-disable react/no-unused-state */
+/* eslint-disable react/prefer-stateless-function */
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 class BooksForm extends React.Component {
   render() {
     const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
     const renderCategories = categories.map(item => (
-      <option>{item}</option>
+      <option key={uuidv4()}>{item}</option>
     ));
     return (
       <div>
