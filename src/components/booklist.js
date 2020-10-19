@@ -2,23 +2,34 @@ import React from 'react';
 import Book from './book';
 // import PropTypes from 'prop-types'
 
-class BookList extends React.Component {
+const BookList = ({ books }) => (
+  <ul>
+    <div>
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Category</th>
+        </tr>
+        {books.map((book, index) => (
+          <Book key={book.id} {...book} />
+        ))}
+      </table>
+    </div>
 
-  render() {
-    const book = { id: '20', title: 'River between', category: 'fiction' };
+  </ul>
+)
 
-    return (
-      <div>
-        <table>
-          <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Category</th>
-          </tr>
-          <Book {...book} />
-        </table>
-      </div>
-    )
-  }
-}
+// TodoList.propTypes = {
+//   todos: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       id: PropTypes.number.isRequired,
+//       completed: PropTypes.bool.isRequired,
+//       text: PropTypes.string.isRequired
+//     }).isRequired
+//   ).isRequired,
+//   onTodoClick: PropTypes.func.isRequired
+// }
+
+
 export default BookList

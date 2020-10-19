@@ -1,18 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import { Provider } from 'react-redux'
-// import { createStore } from 'redux'
-// import { rootReducer } from './reducers'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import bookApp from './reducers/books'
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-// const store = createStore(rootReducer)
+const store = createStore(bookApp)
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root'),
 );
 

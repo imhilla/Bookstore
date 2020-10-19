@@ -1,4 +1,7 @@
 import { createStore } from 'redux';
-// import todoApp from './reducers';
+import { bookApp } from '../reducers/books';
+import { addBook, removeBook } from '../actions/index'
 
-// const store = createStore(todoApp)
+const store = createStore(bookApp)
+// console.log(store.getState())
+// const unsubscribe = store.subscribe(() => console.log(store.getState()))
