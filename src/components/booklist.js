@@ -1,9 +1,11 @@
 import React from 'react';
 import Book from './book';
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux';
 
-const BookList = ({ books }) => (
-  <ul>
+
+const BookList = ({ books }) => {
+  return (
     <div>
       <table>
         <tr>
@@ -16,20 +18,21 @@ const BookList = ({ books }) => (
         ))}
       </table>
     </div>
+  )
+}
 
-  </ul>
-)
+BookList.propTypes = {
+  books: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      title: PropTypes.string,
+      category: PropTypes.string
+    })
+  )
+}
 
-// TodoList.propTypes = {
-//   todos: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.number.isRequired,
-//       completed: PropTypes.bool.isRequired,
-//       text: PropTypes.string.isRequired
-//     }).isRequired
-//   ).isRequired,
-//   onTodoClick: PropTypes.func.isRequired
-// }
+const mapStateToProps = state => ({
+  books: state.books
+});
 
-
-export default BookList
+export default connect(mapStateToProps)(BookList);

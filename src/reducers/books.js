@@ -1,11 +1,10 @@
-import { combineReducers } from 'redux'
 import { ADD_BOOK, REMOVE_BOOK } from '../actions/index'
 
 const initialState = {
-  books: [],
+  books: [{ id: 1, title: 'RiverBetween', category: 'fiction' }, { id: 2, title: 'Kifo Kisimani', category: 'Swahili' }],
 }
 
-function bookList(state = initialState, action) {
+function books(state = initialState, action) {
   console.log('woow')
   switch (action.type) {
     case ADD_BOOK:
@@ -31,8 +30,4 @@ function bookList(state = initialState, action) {
   }
 }
 
-const bookApp = combineReducers({
-  bookList
-})
-
-export default bookApp
+export default books
