@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from './book';
 
@@ -11,6 +12,7 @@ const BookList = ({ books }) => (
         <th>Category</th>
       </tr>
       {books.map(book => (
+        // eslint-disable-next-line react/jsx-props-no-spreading
         <Book key={book.id} {...book} />
       ))}
     </table>
@@ -20,5 +22,13 @@ const BookList = ({ books }) => (
 const mapStateToProps = state => ({
   books: state.books,
 });
+
+BookList.propTypes = {
+  books: PropTypes.objectOf,
+};
+
+BookList.defaultProps = {
+  books: {},
+};
 
 export default connect(mapStateToProps)(BookList);
