@@ -8,7 +8,7 @@ class Book extends React.Component {
         <td>{this.props.title}</td>
         <td>{this.props.category}</td>
       </tr>
-    )
+    );
   }
 }
 

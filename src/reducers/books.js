@@ -1,32 +1,34 @@
-import { ADD_BOOK, REMOVE_BOOK } from '../actions/index'
+import { ADD_BOOK, REMOVE_BOOK } from '../actions/index';
 
 const initialState = {
   books: [{ id: 1, title: 'RiverBetween', category: 'fiction' }, { id: 2, title: 'Kifo Kisimani', category: 'Swahili' }],
-}
+};
 
 function books(state = initialState, action) {
   switch (action.type) {
     case ADD_BOOK:
-      return Object.assign({}, state, {
+      return {
+        ...state,
         books: [
           ...state.books,
           {
             // book: action.book,
-          }
-        ]
-      })
+          },
+        ],
+      };
     case REMOVE_BOOK:
-      return Object.assign({}, state, {
+      return {
+        ...state,
         books: [
           ...state.books,
           {
             // book: action.book,
-          }
-        ]
-      })
+          },
+        ],
+      };
     default:
-      return state
+      return state;
   }
 }
 
-export default books
+export default books;
