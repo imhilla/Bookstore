@@ -10,3 +10,13 @@ th {
   text-align: left;
   padding: 8px;
 }
+
+.App {
+  width: 70%;
+  margin: auto;
+  padding: 3em;
+}
+
+.addbook{
+  margin-top: 2em;
+}

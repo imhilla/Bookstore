@@ -8,7 +8,7 @@ class BooksForm extends React.Component {
     ));
     return (
       <div>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        <button type="button" class="addbook btn btn-primary" data-toggle="modal" data-target="#exampleModal">
           Add book
         </button>
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
