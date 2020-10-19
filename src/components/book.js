@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 class Book extends React.Component {
   render() {
-    const { id, title, category } = this.props
+    const { id, title, category } = this.props;
     return (
       <tr>
         <td>{id}</td>
