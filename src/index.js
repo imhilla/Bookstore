@@ -8,7 +8,6 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 const store = createStore(books);
-console.log(store.getState());
 
 ReactDOM.render(
   <Provider store={store}>
