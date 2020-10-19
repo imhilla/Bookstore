@@ -6,7 +6,7 @@ table {
 
 td,
 th {
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   text-align: left;
   padding: 8px;
 }
@@ -17,6 +17,6 @@ th {
   padding: 3em;
 }
 
-.addbook{
+.addbook {
   margin-top: 2em;
 }
