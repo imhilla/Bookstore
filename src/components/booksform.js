@@ -1,18 +1,15 @@
 import React from 'react'
 
-
-
 class BooksForm extends React.Component {
-
   render() {
     const categories = ["Action", "Biography", "History", "Horror", "Kids", "Learning", "Sci-Fi"];
     const renderCategories = categories.map(item => (
-      <li>{item}</li>
+      <option>{item}</option>
     ));
     return (
       <div>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-          Launch demo modal
+          Add book
         </button>
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
@@ -25,12 +22,11 @@ class BooksForm extends React.Component {
               </div>
               <div class="modal-body">
                 <div class="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Categories
-                  </button>
+                  <select class="custom-select" id="inputGroupSelect01">
+                    <option selected>Choose category</option>
+                    {renderCategories}
+                  </select>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                    {<a class="dropdown-item" href="#">{renderCategories}</a>}
                   </div>
                 </div>
               </div>
