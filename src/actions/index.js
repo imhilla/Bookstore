@@ -1,6 +1,5 @@
 let nextTodoId = 2;
 export function addBook(book) {
-  console.log(book)
   // eslint-disable-next-line no-return-assign
   return { type: 'ADD_BOOK', id: nextTodoId += 1, book };
 }

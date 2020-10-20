@@ -2,6 +2,7 @@
 /* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../actions/index';
 
@@ -9,7 +10,7 @@ class BooksForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: 'nine',
+      title: '',
       category: '',
     };
     this.myRef = React.createRef();
@@ -23,6 +24,7 @@ class BooksForm extends React.Component {
 
   handleChange(e) {
     e.preventDefault();
+    // eslint-disable-next-line react/destructuring-assignment
     this.props.addBook(this.state);
   }
 
@@ -64,7 +66,6 @@ class BooksForm extends React.Component {
                       <option selected>Choose category</option>
                       {renderCategories}
                     </select>
-                    {/* <div className="dropdown-menu" aria-labelledby="dropdownMenuButton" /> */}
                   </div>
                   <div className="modal-footer">
                     <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -79,6 +80,15 @@ class BooksForm extends React.Component {
     );
   }
 }
+
+BooksForm.propTypes = {
+  addBook: PropTypes.func,
+
+};
+
+BooksForm.defaultProps = {
+  addBook: '',
+};
 
 const mapStateToProps = state => ({
   books: state.books,
