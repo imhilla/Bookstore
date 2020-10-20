@@ -13,7 +13,7 @@ const BookList = ({ books }) => (
       </tr>
       {books.map(book => (
         // eslint-disable-next-line react/jsx-props-no-spreading
-        <Book key={book.id} {...book} />
+        <Book {...book} />
       ))}
     </table>
   </div>

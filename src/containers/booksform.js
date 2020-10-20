@@ -6,21 +6,27 @@ import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../actions/index';
 
 class BooksForm extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      title: '',
+      title: 'nine',
       category: '',
+      id: '',
     };
+    // console.log(props);
     this.myRef = React.createRef();
     this.handleChange = this.handleChange.bind(this);
+    this.handleDrop = this.handleDrop.bind(this);
+  }
+
+  handleDrop() {
+    this.setState({ title: this.inputNode.value, category: this.myRef.current.value });
   }
 
   handleChange(e) {
     e.preventDefault();
-    this.setState({ title: this.inputNode.value, category: this.myRef.current.value });
-    // console.log(this.state.title);
-    // console.log(this.state.category);
+    console.log(this.props.addBook(this.state));
+    // this.props.addItem() // Code change: this.props.store.dispatch is no longer being called
   }
 
   render() {
@@ -57,7 +63,7 @@ class BooksForm extends React.Component {
                   </div>
                   <div className="dropdown">
                     {/* eslint-disable-next-line react/destructuring-assignment */}
-                    <select className="custom-select" id="inputGroupSelect01" ref={this.myRef} value={this.state.selectValue}>
+                    <select className="custom-select" id="inputGroupSelect01" onChange={this.handleDrop} ref={this.myRef} value={this.state.selectValue}>
                       <option selected>Choose category</option>
                       {renderCategories}
                     </select>
@@ -82,8 +88,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  addItem: () => {
-    dispatch(addBook());
+  addBook: book => {
+    dispatch(addBook(book));
   },
 });
 
