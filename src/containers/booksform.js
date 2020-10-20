@@ -1,14 +1,16 @@
 /* eslint-disable react/no-unused-state */
 /* eslint-disable react/prefer-stateless-function */
 import React from 'react';
+import { connect } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
+import { addBook } from '../actions/index';
 
 class BooksForm extends React.Component {
   constructor() {
     super();
     this.state = {
-      title: this.title,
-      category: this.category,
+      title: '',
+      category: '',
     };
     this.myRef = React.createRef();
     this.handleChange = this.handleChange.bind(this);
@@ -16,13 +18,9 @@ class BooksForm extends React.Component {
 
   handleChange(e) {
     e.preventDefault();
-    const title = this.inputNode.value;
-    const category = this.myRef.current.value;
-    console.log(title);
-    console.log(category);
-    this.setState(state => ({
-      // isToggleOn: !state.isToggleOn,
-    }));
+    this.setState({ title: this.inputNode.value, category: this.myRef.current.value });
+    // console.log(this.state.title);
+    // console.log(this.state.category);
   }
 
   render() {
@@ -79,4 +77,14 @@ class BooksForm extends React.Component {
   }
 }
 
-export default BooksForm;
+const mapStateToProps = state => ({
+  books: state.books,
+});
+
+const mapDispatchToProps = dispatch => ({
+  addItem: () => {
+    dispatch(addBook());
+  },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(BooksForm);
