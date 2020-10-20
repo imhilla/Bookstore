@@ -10,7 +10,9 @@ function books(state = initialState, action) {
       return {
         ...state,
         books: [
-          ...state.books, action.payload,
+          ...state.books, {
+            id: action.id, title: action.book.title, category: action.book.category,
+          },
         ],
       };
     case 'REMOVE_BOOK':

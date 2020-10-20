@@ -11,9 +11,7 @@ class BooksForm extends React.Component {
     this.state = {
       title: 'nine',
       category: '',
-      id: '',
     };
-    // console.log(props);
     this.myRef = React.createRef();
     this.handleChange = this.handleChange.bind(this);
     this.handleDrop = this.handleDrop.bind(this);
@@ -25,8 +23,7 @@ class BooksForm extends React.Component {
 
   handleChange(e) {
     e.preventDefault();
-    console.log(this.props.addBook(this.state));
-    // this.props.addItem() // Code change: this.props.store.dispatch is no longer being called
+    this.props.addBook(this.state);
   }
 
   render() {
