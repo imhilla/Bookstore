@@ -4,11 +4,26 @@ import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 class BooksForm extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      books: [],
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange() {
+    this.setState(state => ({
+      isToggleOn: !state.isToggleOn,
+    }));
+  }
+
   render() {
     const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
     const renderCategories = categories.map(item => (
       <option key={uuidv4()}>{item}</option>
     ));
+
     return (
       <div>
         <button type="button" className="addbook btn btn-primary" data-toggle="modal" data-target="#exampleModal">
@@ -34,7 +49,7 @@ class BooksForm extends React.Component {
               </div>
               <div className="modal-footer">
                 <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" className="btn btn-primary">Add book</button>
+                <button type="button" className="btn btn-primary" onClick={this.handleChange}>Add book</button>
               </div>
             </div>
           </div>
