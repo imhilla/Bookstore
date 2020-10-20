@@ -7,21 +7,30 @@ class BooksForm extends React.Component {
   constructor() {
     super();
     this.state = {
-      books: [],
+      title: this.title,
+      category: this.category,
     };
+    this.myRef = React.createRef();
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange() {
+  handleChange(e) {
+    e.preventDefault();
+    const title = this.inputNode.value;
+    const category = this.myRef.current.value;
+    console.log(title);
+    console.log(category);
     this.setState(state => ({
-      isToggleOn: !state.isToggleOn,
+      // isToggleOn: !state.isToggleOn,
     }));
   }
 
   render() {
+    const stringId = 'category';
     const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
-    const renderCategories = categories.map(item => (
-      <option key={uuidv4()}>{item}</option>
+    const renderCategories = categories.map((item, id) => (
+      // eslint-disable-next-line no-return-assign
+      <option key={uuidv4()} id={stringId + id.toString()} value={item}>{item}</option>
     ));
 
     return (
@@ -39,17 +48,28 @@ class BooksForm extends React.Component {
                 </button>
               </div>
               <div className="modal-body">
-                <div className="dropdown">
-                  <select className="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose category</option>
-                    {renderCategories}
-                  </select>
-                  <div className="dropdown-menu" aria-labelledby="dropdownMenuButton" />
-                </div>
-              </div>
-              <div className="modal-footer">
-                <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" className="btn btn-primary" onClick={this.handleChange}>Add book</button>
+                <form id="bookForm" name="updateTaskForm">
+                  <div className="title">
+                    {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+                    <label htmlFor="fname">Title</label>
+                    <br />
+                    {/* eslint-disable-next-line no-return-assign */}
+                    <input type="text" id="fname" name="title" ref={node => (this.inputNode = node)} />
+                    <br />
+                  </div>
+                  <div className="dropdown">
+                    {/* eslint-disable-next-line react/destructuring-assignment */}
+                    <select className="custom-select" id="inputGroupSelect01" ref={this.myRef} value={this.state.selectValue}>
+                      <option selected>Choose category</option>
+                      {renderCategories}
+                    </select>
+                    {/* <div className="dropdown-menu" aria-labelledby="dropdownMenuButton" /> */}
+                  </div>
+                  <div className="modal-footer">
+                    <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" className="btn btn-primary" onClick={this.handleChange}>Add book</button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
