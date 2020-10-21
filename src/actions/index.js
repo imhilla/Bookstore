@@ -4,6 +4,6 @@ export function addBook(book) {
   return { type: 'ADD_BOOK', id: nextTodoId += 1, book };
 }
 
-export function removeBook(book) {
-  return { type: 'REMOVE_BOOK', book };
+export function removeBook(id) {
+  return { type: 'REMOVE_BOOK', payload: id };
 }
