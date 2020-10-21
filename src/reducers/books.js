@@ -1,7 +1,11 @@
 /* eslint-disable react/no-unused-state */
 /* eslint-disable react/prefer-stateless-function */
 const initialState = {
-  books: [{ id: 1, title: 'RiverBetween', category: 'fiction' }, { id: 2, title: 'Kifo Kisimani', category: 'Swahili' }],
+  filter: 'All',
+  books: [
+    { id: 1, title: 'RiverBetween', category: 'fiction' },
+    { id: 2, title: 'Kifo Kisimani', category: 'Swahili' },
+  ],
 };
 
 function books(state = initialState, action) {
