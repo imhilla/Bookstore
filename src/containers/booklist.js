@@ -4,9 +4,10 @@ import { connect } from 'react-redux';
 import Book from '../components/book';
 import { removeBook } from '../actions';
 
-const BookList = ({ books }) => {
+const BookList = ({ books, removeBook }) => {
   const handleRemoveBook = book => {
     removeBook(book.id);
+    console.log(book)
   };
 
   return (
@@ -38,10 +39,12 @@ const mapStateToProps = state => ({
 
 BookList.propTypes = {
   books: PropTypes.objectOf,
+  removeBook: PropTypes.func,
 };
 
 BookList.defaultProps = {
   books: {},
+  removeBook: () => { },
 };
 
 const mapDispatchToProps = dispatch => ({

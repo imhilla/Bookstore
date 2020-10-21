@@ -16,10 +16,10 @@ function books(state = initialState, action) {
         ],
       };
     case 'REMOVE_BOOK':
-      // eslint-disable-next-line no-case-declarations
-      const newState = state.filter(book => action.payload !== book.id);
-      console.log(newState);
-      break;
+      return {
+        ...state,
+        books: state.books.filter(book => action.payload !== book.id),
+      };
     default:
       return state;
   }
