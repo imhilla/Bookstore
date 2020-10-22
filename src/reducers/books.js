@@ -5,7 +5,6 @@ const initialState = {
   books: [
     { id: 1, title: 'Mummies', category: 'Horror' },
     { id: 2, title: 'The Flash', category: 'Sci-Fi' },
-    { id: 2, title: 'The Flash', category: 'Sci-Fi' },
   ],
 };
 
@@ -24,6 +23,12 @@ function books(state = initialState, action) {
       return {
         ...state,
         books: state.books.filter(book => action.payload !== book.id),
+      };
+    case 'CHANGE_FILTER':
+      console.log(state.filter);
+      return {
+        ...state,
+        filter: action.payload,
       };
     default:
       return state;

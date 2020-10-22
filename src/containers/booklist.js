@@ -16,8 +16,9 @@ const BookList = ({
     const filter = e.target.value;
     changeFilter(filter);
   };
-  // console.log(books)
+
   const filtered = category === 'All' ? books : books.filter(book => book.category === category);
+  // console.log(filtered);
   return (
     <div>
       <CategoryFilter
