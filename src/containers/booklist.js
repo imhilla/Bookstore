@@ -18,7 +18,6 @@ const BookList = ({
   };
 
   const filtered = category === 'All' ? books : books.filter(book => book.category === category);
-
   return (
     <div>
       <CategoryFilter
@@ -68,6 +67,8 @@ BookList.defaultProps = {
 
 const mapDispatchToProps = dispatch => ({
   removeBook: id => dispatch(removeBook(id)),
+  changeFilter: category => dispatch(changeFilter(category)),
+
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(BookList);
