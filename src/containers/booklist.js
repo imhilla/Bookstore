@@ -16,7 +16,8 @@ const BookList = ({
     const filter = e.target.value;
     changeFilter(filter);
   };
-  const filtered = category === 'All' ? books.books : books.filter(book => book.category === category);
+  // console.log(category)
+  const filtered = category === 'All' ? books.books : books.books.filter(book => book.category === category);
   return (
     <div>
       <CategoryFilter
@@ -46,9 +47,13 @@ const BookList = ({
   );
 };
 
-const mapStateToProps = state => ({
-  books: state.books,
-});
+const mapStateToProps = state => {
+  console.log(state.books.filter)
+  return {
+    books: state.books,
+    category: state.books.filter,
+  };
+};
 
 BookList.propTypes = {
   books: PropTypes.objectOf,
