@@ -16,8 +16,7 @@ const BookList = ({
     const filter = e.target.value;
     changeFilter(filter);
   };
-
-  const filtered = category === 'All' ? books : books.books.filter(book => book.category === category);
+  const filtered = category === 'All' ? books.books : books.filter(book => book.category === category);
   return (
     <div>
       <CategoryFilter
@@ -32,7 +31,7 @@ const BookList = ({
             <th>Category</th>
             <th>Delete</th>
           </tr>
-          {filtered.books.map(book => (
+          {filtered.map(book => (
             <Book
               id={book.id}
               key={book.id}
@@ -68,7 +67,6 @@ BookList.defaultProps = {
 const mapDispatchToProps = dispatch => ({
   removeBook: id => dispatch(removeBook(id)),
   changeFilter: category => dispatch(changeFilter(category)),
-
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(BookList);

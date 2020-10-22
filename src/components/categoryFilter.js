@@ -7,6 +7,7 @@ const renderCategories = categories.map(item => (
   // eslint-disable-next-line no-return-assign
   <option key={uuidv4()} value={item}>{item}</option>
 ));
+
 const categoryFilter = ({ filter = 'All', handleFilterChange }) => (
   <div className="dropdown">
     <h3>Filter books</h3>
