@@ -24,12 +24,12 @@ function books(state = initialState, action) {
         ...state,
         books: state.books.filter(book => action.payload !== book.id),
       };
-    case 'CHANGE_FILTER':
-      console.log(state.filter);
-      return {
-        ...state,
-        filter: action.payload,
-      };
+    // case 'CHANGE_FILTER':
+    //   console.log(state.filter);
+    //   return {
+    //     ...state,
+    //     filter: action.payload,
+    //   };
     default:
       return state;
   }
