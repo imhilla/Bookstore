@@ -17,7 +17,7 @@ const BookList = ({
     changeFilter(filter);
   };
 
-  const filtered = category === 'All' ? books : books.filter(book => book.category === category);
+  const filtered = category === 'All' ? books : books.books.filter(book => book.category === category);
   return (
     <div>
       <CategoryFilter
@@ -32,7 +32,7 @@ const BookList = ({
             <th>Category</th>
             <th>Delete</th>
           </tr>
-          {filtered.map(book => (
+          {filtered.books.map(book => (
             <Book
               id={book.id}
               key={book.id}

@@ -2,20 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import rootReducer from './reducers';
 import './index.css';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
+import rootReducer from './reducers/index';
 
-const defaultState = {
-  filter: 'All',
-  books: [
-    { id: 1, title: 'Mummies', category: 'Horror' },
-    { id: 2, title: 'The Flash', category: 'Sci-Fi' },
-  ],
-};
-
-const store = createStore(rootReducer(defaultState));
+const store = createStore(rootReducer);
 
 ReactDOM.render(
   <Provider store={store}>
