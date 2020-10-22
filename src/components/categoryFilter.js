@@ -12,8 +12,8 @@ const categoryFilter = ({ filter = 'All', handleFilterChange }) => (
     <h3>Filter books</h3>
     <select
       id="inputGroupSelect01"
-      onChange={handleFilterChange}
       value={filter}
+      onChange={handleFilterChange}
     >
       <option selected>Choose category</option>
       {renderCategories}

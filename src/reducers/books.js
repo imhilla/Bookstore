@@ -1,14 +1,7 @@
 /* eslint-disable react/no-unused-state */
 /* eslint-disable react/prefer-stateless-function */
-const initialState = {
-  filter: 'All',
-  books: [
-    { id: 1, title: 'Mummies', category: 'Horror' },
-    { id: 2, title: 'The Flash', category: 'Sci-Fi' },
-  ],
-};
 
-function books(state = initialState, action) {
+const books = initialState => (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_BOOK':
       return {
@@ -27,6 +20,6 @@ function books(state = initialState, action) {
     default:
       return state;
   }
-}
+};
 
 export default books;
