@@ -3,8 +3,8 @@
 const initialState = {
   filter: 'All',
   books: [
-    { id: 1, title: 'RiverBetween', category: 'fiction' },
-    { id: 2, title: 'Kifo Kisimani', category: 'Swahili' },
+    { id: 1, title: 'Mummies', category: 'Horror' },
+    { id: 2, title: 'The Flash', category: 'Sci-Fi' },
   ],
 };
 

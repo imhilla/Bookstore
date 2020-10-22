@@ -7,3 +7,7 @@ export function addBook(book) {
 export function removeBook(id) {
   return { type: 'REMOVE_BOOK', payload: id };
 }
+
+export function changeFilter(category) {
+  return { type: 'CHANGE_FILTER', payload: category };
+}
