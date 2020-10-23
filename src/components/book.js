@@ -37,8 +37,10 @@ const Book = book => {
         </div>
       </div>
       <span className="span-line" />
-      <div>
-           <h3></h3>
+      <div className="progresss">
+        <h3 className="Current-Chapter">CURRENT CHAPTER</h3>
+        <h3 className="Current-Lesson">Chapter 17</h3>
+        <button type="button" className="Update-progress btn btn-primary">UPDATE PROGRESS</button>
       </div>
     </div>
   );

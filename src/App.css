@@ -332,3 +332,49 @@ align-items: center;
   display: flex;
   align-items: center;
 }
+
+.Current-Chapter {
+  width: 126px;
+  height: 18px;
+  opacity: 0.5;
+  font-family: RobotoSlab;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-three);
+}
+
+.Current-Lesson {
+  width: 75px;
+  height: 21px;
+  font-family: RobotoSlab;
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: var(--black-three);
+}
+
+.Update-progress {
+  font-family: RobotoSlab;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  border: none;
+}
+
+.progresss {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right:20px ;
+}
