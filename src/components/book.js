@@ -37,7 +37,7 @@ const Book = book => {
         </div>
         <div className="d-flexx">
           <div className="Percent-Complete">
-            {randomNumber(50, 100)}
+            {randomNumber(50, 70)}
           </div>
           <p className="Completed">Completed</p>
         </div>
