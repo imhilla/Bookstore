@@ -12,15 +12,202 @@ th {
 }
 
 .App {
-  width: 70%;
-  margin: auto;
-  padding: 3em;
-}
-
-.addbook {
-  margin-top: 2em;
+  width: 100%;
+  height: auto;
+  background-color: #f5f6fa;
+  padding: 149px 100px 0 149px;
 }
 
 .title {
   padding-bottom: 1em;
+}
+
+.Bookstore-CMS {
+  width: 240px;
+  height: 37px;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
+  margin: 29px 37px 29px 100px;
+}
+
+.panel-bg {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 95px;
+  background-color: #ffffff;
+}
+
+.second-panel {
+  display: flex;
+}
+
+.CATEGORIES {
+  width: 105px;
+  height: 16px;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #474747;
+}
+
+.BOOKS {
+  width: 59px;
+  height: 16px;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+  padding: 41px 16px 38px 0;
+}
+
+.panel-bg select {
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-overflow: "";
+}
+
+.panel-bg select:focus {
+  outline: none;
+}
+
+.categories {
+  padding: 38px 16px 38px 41px;
+}
+
+.oval {
+  width: 45px;
+  height: 45px;
+  border: solid 1px #e8e8e8;
+  border-radius: 50%;
+}
+
+.user {
+  width: 17px;
+  height: 17px;
+  margin: 10px 0 0 12px;
+}
+
+.holder {
+  margin: 23px 98px 27px 0;
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  height: 170px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+  margin: 15px 100px;
+  padding-left: 30px;
+}
+
+.school {
+  width: 49px;
+  height: 18px;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-three);
+  margin-top: 32px;
+}
+
+.title {
+  width: 197px;
+  height: 29px;
+  font-family: "Roboto Slab", serif;
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: var(--black-three);
+}
+
+.Suzanne-Collins {
+  width: 107px;
+  height: 19px;
+  font-family: RobotoSlab;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.Comments {
+  width: 73px;
+  height: 19px;
+  font-family: RobotoSlab;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.Remove {
+  width: 54px;
+  height: 19px;
+  font-family: RobotoSlab;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+  border: none;
+  background-color: #fff;
+}
+
+.Remove:focus {
+  outline: none;
+}
+
+.Edit {
+  width: 27px;
+  height: 19px;
+  font-family: RobotoSlab;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.Line-2 {
+  width: 2px;
+  height: 24px;
+  border: solid 1px #e8e8e8;
+  margin: 15px;
 }
