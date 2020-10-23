@@ -10,7 +10,7 @@
 .Bookstore-CMS {
   width: 240px;
   height: 37px;
-  font-family: Montserrat;
+  font-family: "Montserrat", sans-serif;
   font-size: 30px;
   font-weight: bold;
   font-stretch: normal;
@@ -37,7 +37,7 @@
   width: 105px;
   height: 16px;
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: "Montserrat", sans-serif;
   font-size: 13px;
   font-weight: normal;
   font-stretch: normal;
@@ -50,7 +50,7 @@
 .BOOKS {
   width: 59px;
   height: 16px;
-  font-family: Montserrat;
+  font-family: "Montserrat", sans-serif;
   font-size: 13px;
   font-weight: normal;
   font-stretch: normal;
@@ -109,7 +109,7 @@
   width: 49px;
   height: 18px;
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: bold;
   font-stretch: normal;
@@ -264,7 +264,7 @@
   width: 80px;
   height: 18px;
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
@@ -279,7 +279,7 @@
 .Percent-Complete {
   width: 68px;
   height: 39px;
-  font-family: Montserrat;
+  font-family: "Montserrat", sans-serif;
   font-size: 32px;
   font-weight: normal;
   font-stretch: normal;
@@ -289,18 +289,13 @@
   color: var(--black-three);
 }
 
-/* .container{
-  width: 110px;
-  height: 110px;
-  margin: 100px auto;
-} */
-.prec{
+.prec {
   top: 30px;
   position: relative;
   font-size: 30px;
 }
 
-.circle{
+.circle {
   position: relative;
   top: 5px;
   left: 5px;
@@ -311,22 +306,20 @@
   background-color: #ffffff;
 }
 
-.active-border{
+.active-border {
   position: relative;
   text-align: center;
   width: 60px;
   height: 60px;
   border-radius: 100%;
 
-  background-color:#5531e6;
-  background-image:
-      linear-gradient(91deg, transparent 40%, #307bbe 60%),
-      linear-gradient(90deg, #c7cbff 40%, transparent 60%);
-  
+  background-color: #5531e6;
+  background-image: linear-gradient(91deg, transparent 40%, #307bbe 60%),
+    linear-gradient(90deg, #c7cbff 40%, transparent 60%);
 }
 
 .d-flex {
-align-items: center;
+  align-items: center;
 }
 
 .d-flexx {
@@ -377,5 +370,5 @@ align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-right:20px ;
+  margin-right: 20px;
 }

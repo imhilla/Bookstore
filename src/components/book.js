@@ -53,7 +53,8 @@ const Book = book => {
         <h3 className="Current-Chapter">CURRENT CHAPTER</h3>
         <h3 className="Current-Lesson">
           Chapter
-          &nbsp;{randomChapter(2, 20)}
+          &nbsp;
+          {randomChapter(2, 20)}
         </h3>
         <button type="button" className="Update-progress btn btn-primary">UPDATE PROGRESS</button>
       </div>
