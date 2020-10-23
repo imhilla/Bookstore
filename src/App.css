@@ -1,26 +1,371 @@
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td,
-th {
-  border: 1px solid #ddd;
-  text-align: left;
-  padding: 8px;
-}
-
 .App {
-  width: 70%;
-  margin: auto;
-  padding: 3em;
+  width: 100%;
+  height: auto;
+  background-color: #f5f6fa;
+  padding: 149px 100px 0 149px;
+  border-radius: 4px;
+  margin-bottom: 20px;
 }
 
-.addbook {
-  margin-top: 2em;
+.Bookstore-CMS {
+  width: 240px;
+  height: 37px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
+  margin: 29px 37px 29px 100px;
+}
+
+.panel-bg {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 95px;
+  background-color: #fff;
+}
+
+.second-panel {
+  display: flex;
+}
+
+.CATEGORIES {
+  width: 105px;
+  height: 16px;
+  opacity: 0.5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #474747;
+}
+
+.BOOKS {
+  width: 59px;
+  height: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+  padding: 41px 16px 38px 0;
+}
+
+.panel-bg select {
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-overflow: "";
+}
+
+.panel-bg select:focus {
+  outline: none;
+}
+
+.categories {
+  padding: 38px 16px 38px 41px;
+}
+
+.oval {
+  width: 45px;
+  height: 45px;
+  border: solid 1px #e8e8e8;
+  border-radius: 50%;
+}
+
+.user {
+  width: 17px;
+  height: 17px;
+  margin: 10px 0 0 12px;
+}
+
+.holder {
+  margin: 23px 98px 27px 0;
+}
+
+.contents {
+  display: flex;
+  flex-direction: row;
+  height: 170px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  margin: 15px 100px;
+  padding-left: 30px;
+  justify-content: space-between;
+}
+
+.school {
+  width: 49px;
+  height: 18px;
+  opacity: 0.5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-three);
+  margin-top: 32px;
 }
 
 .title {
-  padding-bottom: 1em;
+  width: 197px;
+  height: 29px;
+  font-family: "Roboto Slab", serif;
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: var(--black-three);
+}
+
+.Suzanne-Collins {
+  width: 107px;
+  height: 19px;
+  font-family: "Roboto Slab", serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4c9adf;
+}
+
+.Comments {
+  width: 73px;
+  height: 19px;
+  font-family: "Roboto Slab", serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #66aeec;
+}
+
+.Edit {
+  width: 27px;
+  height: 19px;
+  font-family: "Roboto Slab", serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.Comments:hover,
+.Edit:hover {
+  text-decoration: none;
+}
+
+.Remove {
+  width: 54px;
+  height: 19px;
+  font-family: "Roboto Slab", serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4a9ee7;
+  border: none;
+  background-color: #fff;
+}
+
+.Remove:focus {
+  outline: none;
+}
+
+.Line-2 {
+  width: 2px;
+  height: 24px;
+  border: solid 1px #e8e8e8;
+  margin: 15px;
+}
+
+.inputLesson {
+  height: 45px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  width: 100%;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.titlee {
+  width: 174px;
+  height: 24px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.custom-select {
+  height: 45px;
+  border-radius: 4px;
+  border: solid 1px #e8e;
+  background-color: #fff;
+}
+
+.addContainer {
+  padding: 0 100px;
+  padding-bottom: 265px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.inputw {
+  width: 60%;
+}
+
+.books-container {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.span-line {
+  width: 2px;
+  height: 70px;
+  border: solid 1px #e8e8e8;
+  margin: auto;
+}
+
+.Completed {
+  width: 80px;
+  height: 18px;
+  opacity: 0.5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-three);
+  margin: auto;
+  padding-left: 10px;
+}
+
+.Percent-Complete {
+  width: 68px;
+  height: 39px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-three);
+}
+
+.prec {
+  top: 30px;
+  position: relative;
+  font-size: 30px;
+}
+
+.circle {
+  position: relative;
+  top: 5px;
+  left: 5px;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: #fff;
+}
+
+.active-border {
+  position: relative;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background-color: #5531e6;
+  background-image:
+    linear-gradient(91deg, transparent 40%, #307bbe 60%),
+    linear-gradient(90deg, #c7cbff 40%, transparent 60%);
+}
+
+.d-flex {
+  align-items: center;
+}
+
+.d-flexx {
+  display: flex;
+  align-items: center;
+}
+
+.Current-Chapter {
+  width: 126px;
+  height: 18px;
+  opacity: 0.5;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-three);
+}
+
+.Current-Lesson {
+  width: 75px;
+  height: 21px;
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: var(--black-three);
+}
+
+.Update-progress {
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  border: none;
+}
+
+.progresss {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 20px;
 }

@@ -17,6 +17,8 @@ const BookList = ({
     changeFilter(filter);
   };
 
+  const author = 'Hillary';
+
   const filtered = category === 'All' ? books : books.filter(book => book.category === category);
   return (
     <div>
@@ -24,25 +26,18 @@ const BookList = ({
         filter={category}
         handleFilterChange={handleFilterChange}
       />
-      <table>
-        <tbody>
-          <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Category</th>
-            <th>Delete</th>
-          </tr>
-          {filtered.map(book => (
-            <Book
-              id={book.id}
-              key={book.id}
-              handleRemoveBook={handleRemoveBook}
-              // eslint-disable-next-line react/jsx-props-no-spreading
-              {...book}
-            />
-          ))}
-        </tbody>
-      </table>
+      <div className="books-container">
+        {filtered.map(book => (
+          <Book
+            id={book.id}
+            key={book.id}
+            author={author}
+            handleRemoveBook={handleRemoveBook}
+            // eslint-disable-next-line react/jsx-props-no-spreading
+            {...book}
+          />
+        ))}
+      </div>
     </div>
   );
 };
@@ -53,14 +48,14 @@ const mapStateToProps = state => ({
 });
 
 BookList.propTypes = {
-  books: PropTypes.objectOf,
+  books: PropTypes.arrayOf(PropTypes.any),
   removeBook: PropTypes.func,
-  changeFilter: () => { },
+  changeFilter: PropTypes.func,
   category: PropTypes.string,
 };
 
 BookList.defaultProps = {
-  books: {},
+  books: [],
   removeBook: () => { },
   changeFilter: () => { },
   category: 'All',
