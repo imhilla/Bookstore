@@ -7,6 +7,12 @@ const Book = book => {
     title, category, handleRemoveBook, author,
   } = book;
 
+  function randomNumber(min, max) {
+    let ans = Math.random() * (max - min) + min;
+    ans = Math.floor(ans);
+    return `${ans}%`;
+  }
+
   return (
     <div className="contents">
       <div>
@@ -31,7 +37,7 @@ const Book = book => {
         </div>
         <div className="d-flexx">
           <div className="Percent-Complete">
-            64%
+            {randomNumber(50, 100)}
           </div>
           <p className="Completed">Completed</p>
         </div>
