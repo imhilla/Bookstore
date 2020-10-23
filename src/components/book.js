@@ -13,6 +13,12 @@ const Book = book => {
     return `${ans}%`;
   }
 
+  function randomChapter(min, max) {
+    let ans = Math.random() * (max - min) + min;
+    ans = Math.floor(ans);
+    return ans;
+  }
+
   return (
     <div className="contents">
       <div>
@@ -45,7 +51,10 @@ const Book = book => {
       <span className="span-line" />
       <div className="progresss">
         <h3 className="Current-Chapter">CURRENT CHAPTER</h3>
-        <h3 className="Current-Lesson">Chapter 17</h3>
+        <h3 className="Current-Lesson">
+          Chapter
+          &nbsp;{randomChapter(2, 20)}
+        </h3>
         <button type="button" className="Update-progress btn btn-primary">UPDATE PROGRESS</button>
       </div>
     </div>
