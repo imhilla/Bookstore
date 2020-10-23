@@ -4,6 +4,7 @@
   background-color: #f5f6fa;
   padding: 149px 100px 0 149px;
   border-radius: 4px;
+  margin-bottom: 20px;
 }
 
 .Bookstore-CMS {
@@ -94,13 +95,14 @@
 
 .contents {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 170px;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: #ffffff;
   margin: 15px 100px;
   padding-left: 30px;
+  justify-content: space-between;
 }
 
 .school {
@@ -236,10 +238,97 @@
 }
 
 .addContainer {
-  margin: 0 100px;
-  padding-bottom: 100px;
+  padding: 0 100px;
+  padding-bottom: 265px;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .inputw {
   width: 60%;
+}
+
+.books-container {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.span-line {
+  width: 2px;
+  height: 70px;
+  border: solid 1px #e8e8e8;
+}
+
+.Completed {
+  width: 80px;
+  height: 18px;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-three);
+  margin: auto;
+  padding-left: 10px;
+}
+
+.Percent-Complete {
+  width: 68px;
+  height: 39px;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-three);
+}
+
+/* .container{
+  width: 110px;
+  height: 110px;
+  margin: 100px auto;
+} */
+.prec{
+  top: 30px;
+  position: relative;
+  font-size: 30px;
+}
+
+.circle{
+  position: relative;
+  top: 5px;
+  left: 5px;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: #ffffff;
+}
+
+.active-border{
+  position: relative;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+
+  background-color:#5531e6;
+  background-image:
+      linear-gradient(91deg, transparent 40%, #307bbe 60%),
+      linear-gradient(90deg, #c7cbff 40%, transparent 60%);
+  
+}
+
+.d-flex {
+align-items: center;
+}
+
+.d-flexx {
+  display: flex;
+  align-items: center;
 }

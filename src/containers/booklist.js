@@ -26,7 +26,7 @@ const BookList = ({
         filter={category}
         handleFilterChange={handleFilterChange}
       />
-      <div>
+      <div className="books-container">
         {filtered.map(book => (
           <Book
             id={book.id}
