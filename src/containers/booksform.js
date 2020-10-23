@@ -37,46 +37,30 @@ class BooksForm extends React.Component {
     ));
 
     return (
-      <div>
-        <button type="button" className="addbook btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-          Add book
-        </button>
-        <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div className="modal-dialog" role="document">
-            <div className="modal-content">
-              <div className="modal-header">
-                <h5 className="modal-title" id="exampleModalLabel">Add to Bookstore</h5>
-                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div className="modal-body">
-                <form id="bookForm" name="updateTaskForm">
-                  <div className="title">
-                    {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-                    <label htmlFor="fname">Title</label>
-                    <br />
-                    {/* eslint-disable-next-line no-return-assign */}
-                    <input type="text" id="fname" name="title" ref={node => (this.inputNode = node)} />
-                    <br />
-                  </div>
-                  <div className="dropdown">
-                    {/* eslint-disable-next-line react/destructuring-assignment */}
-                    <select className="custom-select" id="inputGroupSelect01" onChange={this.handleDrop} ref={this.myRef} value={this.state.selectValue}>
-                      <option selected>Choose category</option>
-                      {renderCategories}
-                    </select>
-                  </div>
-                  <div className="modal-footer">
-                    <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" className="btn btn-primary" onClick={this.handleChange}>Add book</button>
-                  </div>
-                </form>
-              </div>
+      <div className="addContainer">
+        <div>
+          <h5 className="titlee">ADD NEW BOOK</h5>
+        </div>
+        <div>
+          <form id="bookForm" name="updateTaskForm" className="formContainer">
+            <div className="inputw">
+              {/* eslint-disable-next-line no-return-assign */}
+              <input type="text" id="fname" name="title" ref={node => (this.inputNode = node)} className="inputLesson" />
             </div>
-          </div>
+            <div className="dropdown">
+              {/* eslint-disable-next-line react/destructuring-assignment */}
+              <select className="custom-select" id="inputGroupSelect01" onChange={this.handleDrop} ref={this.myRef} value={this.state.selectValue}>
+                <option selected>Choose category</option>
+                {renderCategories}
+              </select>
+            </div>
+            <div>
+              <button type="button" className="btn btn-primary" onClick={this.handleChange}>ADD BOOK</button>
+            </div>
+          </form>
         </div>
       </div>
+
     );
   }
 }

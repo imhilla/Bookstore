@@ -1,25 +1,8 @@
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td,
-th {
-  border: 1px solid #ddd;
-  text-align: left;
-  padding: 8px;
-}
-
 .App {
   width: 100%;
   height: auto;
   background-color: #f5f6fa;
   padding: 149px 100px 0 149px;
-}
-
-.title {
-  padding-bottom: 1em;
 }
 
 .Bookstore-CMS {
@@ -157,7 +140,7 @@ th {
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #4386bf;
+  color: #4c9adf;
 }
 
 .Comments {
@@ -170,7 +153,12 @@ th {
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #4386bf;
+  color: #66aeec;
+}
+
+.Comments:hover,
+.Edit:hover {
+  text-decoration: none;
 }
 
 .Remove {
@@ -183,7 +171,7 @@ th {
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #4386bf;
+  color: #4a9ee7;
   border: none;
   background-color: #fff;
 }
@@ -210,4 +198,46 @@ th {
   height: 24px;
   border: solid 1px #e8e8e8;
   margin: 15px;
+}
+
+.inputLesson {
+  height: 45px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.titlee {
+  width: 174px;
+  height: 24px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888888;
+}
+
+.custom-select {
+  height: 45px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+}
+
+.addContainer{
+  margin: 0 100px;
+}
+
+.inputw {
+  width: 60%;
 }
