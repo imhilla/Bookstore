@@ -159,6 +159,19 @@
   color: #66aeec;
 }
 
+.Edit {
+  width: 27px;
+  height: 19px;
+  font-family: "Roboto Slab", serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
 .Comments:hover,
 .Edit:hover {
   text-decoration: none;
@@ -181,19 +194,6 @@
 
 .Remove:focus {
   outline: none;
-}
-
-.Edit {
-  width: 27px;
-  height: 19px;
-  font-family: "Roboto Slab", serif;
-  font-size: 14px;
-  font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #4386bf;
 }
 
 .Line-2 {
@@ -312,7 +312,6 @@
   width: 60px;
   height: 60px;
   border-radius: 100%;
-
   background-color: #5531e6;
   background-image: linear-gradient(91deg, transparent 40%, #307bbe 60%),
     linear-gradient(90deg, #c7cbff 40%, transparent 60%);
