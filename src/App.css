@@ -331,7 +331,6 @@
   width: 126px;
   height: 18px;
   opacity: 0.5;
-  font-family: RobotoSlab;
   font-size: 13px;
   font-weight: 300;
   font-stretch: normal;
@@ -344,7 +343,6 @@
 .Current-Lesson {
   width: 75px;
   height: 21px;
-  font-family: RobotoSlab;
   font-size: 16px;
   font-weight: 300;
   font-stretch: normal;
@@ -355,7 +353,6 @@
 }
 
 .Update-progress {
-  font-family: RobotoSlab;
   font-size: 13px;
   font-weight: 300;
   font-stretch: normal;
