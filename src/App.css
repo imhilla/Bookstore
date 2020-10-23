@@ -3,6 +3,7 @@
   height: auto;
   background-color: #f5f6fa;
   padding: 149px 100px 0 149px;
+  border-radius: 4px;
 }
 
 .Bookstore-CMS {
@@ -234,8 +235,9 @@
   background-color: #ffffff;
 }
 
-.addContainer{
+.addContainer {
   margin: 0 100px;
+  padding-bottom: 100px;
 }
 
 .inputw {
