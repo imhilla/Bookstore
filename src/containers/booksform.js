@@ -30,7 +30,7 @@ class BooksForm extends React.Component {
 
   render() {
     const stringId = 'category';
-    const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+    const categories = ['Choose a category', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
     const renderCategories = categories.map((item, id) => (
       // eslint-disable-next-line no-return-assign
       <option key={uuidv4()} id={stringId + id.toString()} value={item}>{item}</option>
@@ -48,9 +48,14 @@ class BooksForm extends React.Component {
               <input type="text" id="fname" name="title" ref={node => (this.inputNode = node)} className="inputLesson" />
             </div>
             <div className="dropdown">
-              {/* eslint-disable-next-line react/destructuring-assignment */}
-              <select className="custom-select" id="inputGroupSelect01" onChange={this.handleDrop} ref={this.myRef} value={this.state.selectValue}>
-                <option selected>Choose category</option>
+              <select
+                className="custom-select"
+                id="inputGroupSelect01"
+                onChange={this.handleDrop}
+                ref={this.myRef}
+                // eslint-disable-next-line react/destructuring-assignment
+                value={this.state.selectValue}
+              >
                 {renderCategories}
               </select>
             </div>

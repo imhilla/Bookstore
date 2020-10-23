@@ -2,7 +2,7 @@ import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import user from '../img/user.png';
 
-const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+const categories = ['CATEGORIES', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 const booksLink = 'BOOKS';
 
 const renderCategories = categories.map(item => (
@@ -22,7 +22,6 @@ const categoryFilter = ({ filter = 'All', handleFilterChange }) => (
           onChange={handleFilterChange}
           className="CATEGORIES"
         >
-          <option selected>CATEGORIES</option>
           {renderCategories}
         </select>
       </div>
@@ -32,5 +31,9 @@ const categoryFilter = ({ filter = 'All', handleFilterChange }) => (
     </div>
   </div>
 );
+
+categoryFilter.defaultProps = {
+  addBook: '',
+};
 
 export default categoryFilter;

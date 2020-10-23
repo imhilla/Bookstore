@@ -48,14 +48,14 @@ const mapStateToProps = state => ({
 });
 
 BookList.propTypes = {
-  books: PropTypes.objectOf,
+  books: PropTypes.arrayOf(PropTypes.any),
   removeBook: PropTypes.func,
-  changeFilter: () => { },
+  changeFilter: PropTypes.func,
   category: PropTypes.string,
 };
 
 BookList.defaultProps = {
-  books: {},
+  books: [],
   removeBook: () => { },
   changeFilter: () => { },
   category: 'All',
