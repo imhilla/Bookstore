@@ -18,23 +18,27 @@ class BooksForm extends React.Component {
     this.handleDrop = this.handleDrop.bind(this);
   }
 
-  handleDrop() {
-    this.setState({ title: this.inputNode.value, category: this.myRef.current.value });
+  handleDrop(event) {
+    this.setState(
+      {
+        title: this.inputNode.value, category: this.myRef.current.value, value: event.target.value,
+      },
+    );
   }
 
   handleChange(e) {
     e.preventDefault();
-    // eslint-disable-next-line react/destructuring-assignment
-    this.props.addBook(this.state);
+    const thisprops = this.props;
+    thisprops.addBook(this.state);
   }
 
   render() {
-    const stringId = 'category';
     const categories = ['Choose a category', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
-    const renderCategories = categories.map((item, id) => (
-      // eslint-disable-next-line no-return-assign
-      <option key={uuidv4()} id={stringId + id.toString()} value={item}>{item}</option>
+    const renderCategories = categories.map(item => (
+      <option key={uuidv4()} value={item}>{item}</option>
     ));
+
+    const { value } = this.state;
 
     return (
       <div className="addContainer">
@@ -44,8 +48,14 @@ class BooksForm extends React.Component {
         <div>
           <form id="bookForm" name="updateTaskForm" className="formContainer">
             <div className="inputw">
-              {/* eslint-disable-next-line no-return-assign */}
-              <input type="text" id="fname" name="title" ref={node => (this.inputNode = node)} className="inputLesson" />
+              <input
+                type="text"
+                id="fname"
+                name="title"
+                // eslint-disable-next-line no-return-assign
+                ref={node => (this.inputNode = node)}
+                className="inputLesson"
+              />
             </div>
             <div className="dropdown">
               <select
@@ -53,8 +63,7 @@ class BooksForm extends React.Component {
                 id="inputGroupSelect01"
                 onChange={this.handleDrop}
                 ref={this.myRef}
-                // eslint-disable-next-line react/destructuring-assignment
-                value={this.state.selectValue}
+                value={value}
               >
                 {renderCategories}
               </select>

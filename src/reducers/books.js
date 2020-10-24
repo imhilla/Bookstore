@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unused-state */
 /* eslint-disable react/prefer-stateless-function */
 const initialState = {
   filter: 'All',
