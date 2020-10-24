@@ -18,8 +18,12 @@ class BooksForm extends React.Component {
     this.handleDrop = this.handleDrop.bind(this);
   }
 
-  handleDrop() {
-    this.setState({ title: this.inputNode.value, category: this.myRef.current.value });
+  handleDrop(event) {
+    this.setState(
+      {
+        title: this.inputNode.value, category: this.myRef.current.value, value: event.target.value,
+      },
+    );
   }
 
   handleChange(e) {
@@ -54,7 +58,7 @@ class BooksForm extends React.Component {
                 onChange={this.handleDrop}
                 ref={this.myRef}
                 // eslint-disable-next-line react/destructuring-assignment
-                value={this.state.selectValue}
+                value={this.state.value}
               >
                 {renderCategories}
               </select>
