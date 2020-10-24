@@ -6,7 +6,6 @@ const categories = ['CATEGORIES', 'Action', 'Biography', 'History', 'Horror', 'K
 const booksLink = 'BOOKS';
 
 const renderCategories = categories.map(item => (
-  // eslint-disable-next-line no-return-assign
   <option key={uuidv4()} value={item}>{item}</option>
 ));
 
