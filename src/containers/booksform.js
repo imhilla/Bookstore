@@ -52,8 +52,10 @@ class BooksForm extends React.Component {
                 type="text"
                 id="fname"
                 name="title"
+                // eslint-disable-next-line no-return-assign
                 ref={node => (this.inputNode = node)}
-                className="inputLesson" />
+                className="inputLesson"
+              />
             </div>
             <div className="dropdown">
               <select
