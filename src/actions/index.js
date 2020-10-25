@@ -1,8 +1,7 @@
 let nextTodoId = 2;
-// eslint-disable-next-line no-multi-assign
-const plus = nextTodoId += 1;
 export function addBook(book) {
-  return { type: 'ADD_BOOK', id: plus, book };
+  // eslint-disable-next-line no-return-assign
+  return { type: 'ADD_BOOK', id: nextTodoId += 1, book };
 }
 
 export function removeBook(id) {
