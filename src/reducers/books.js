@@ -1,7 +1,10 @@
-/* eslint-disable react/no-unused-state */
 /* eslint-disable react/prefer-stateless-function */
 const initialState = {
-  books: [{ id: 1, title: 'RiverBetween', category: 'fiction' }, { id: 2, title: 'Kifo Kisimani', category: 'Swahili' }],
+  filter: 'All',
+  books: [
+    { id: 1, title: 'Mummies', category: 'Horror' },
+    { id: 2, title: 'The Flash', category: 'Sci-Fi' },
+  ],
 };
 
 function books(state = initialState, action) {
@@ -19,6 +22,11 @@ function books(state = initialState, action) {
       return {
         ...state,
         books: state.books.filter(book => action.payload !== book.id),
+      };
+    case 'CHANGE_FILTER':
+      return {
+        ...state,
+        filter: action.payload,
       };
     default:
       return state;
